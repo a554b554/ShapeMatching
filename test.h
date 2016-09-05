@@ -5,6 +5,6 @@
 
 void test1();
 void testrotatefrom();
-
+void testrotationInv();
 
 #endif // TEST_H

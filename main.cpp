@@ -10,7 +10,8 @@ using namespace std;
 
 int main()
 {
-    testrotatefrom();
+//    testrotatefrom();
+    testrotationInv();
 
 
 //    int nrows = 4;

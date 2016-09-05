@@ -21,7 +21,7 @@ void testrotatefrom(){
     g0.y=1;
     g1.x=1;
     g1.y=2;
-    mPoint g3(2,0);
+    mPoint g3(4,0);
     double dx = g1.x-g0.x;
     double dy = g1.y-g0.y;
     double l = sqrt(dx*dx+dy*dy);
@@ -32,10 +32,14 @@ void testrotatefrom(){
 
 
 void testrotationInv(){
-    vector<vector<mPoint>> plistsa;
-    loadPlist(plistsa,"./Data/char_a");
-    vector<mPoint> pts = plista[0];
-    vector<mPoint> ptsr = plistsa[0];
+    vector<vector<mPoint>> plists;
+    loadPlist(plists,"./Data/char_a");
+    vector<mPoint> pts = plists[0];
+    vector<mPoint> ptsr = plists[1];
+    for(int i=0; i<ptsr.size(); i++){
+        ptsr[i].rotatefrom(mPoint(0,0),0,-1);
+    }
+    cout<<shapeMatching(pts,ptsr)<<endl;
 }
 
 

@@ -34,7 +34,7 @@ Matrix<double> constructCostMat(const vector<vector<double> > &des1, const vecto
 //        std::cout << std::endl;
 //    }
 //    std::cout << std::endl;
-    cout<<nrows<<" "<<ncols<<endl;
+//    cout<<nrows<<" "<<ncols<<endl;
     return costMat;
 }
 
@@ -47,18 +47,19 @@ double solveMat(const Matrix<double> &mat){
 
     for ( int row = 0 ; row < d.rows() ; row++ ) {
         for ( int col = 0 ; col < d.columns() ; col++ ) {
-            std::cout << d(row,col) << ",";
+//            std::cout << d(row,col) << ",";
             if(d(row,col)==0){
                 cost += mat(row,col);
             }
         }
-        std::cout << std::endl;
+//        std::cout << std::endl;
     }
-    std::cout << std::endl;
+//    std::cout << std::endl;
     return cost;
 }
 
 double shapeMatching(vector<mPoint> &font1, vector<mPoint> &font2, bool rotateInv, int thetasize, int rsize){
+    cout<<"start matching..."<<endl;
     ShapeDescriptor d0(font1);
     ShapeDescriptor d1(font2);
     d0.setBinSize(thetasize, rsize);
